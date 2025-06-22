@@ -169,7 +169,7 @@ h1 {
         width: 100%;
     }
     .container {
-        height: auto;
+        height: 100vh;
     }
     .profile {
         align-items: center;
@@ -183,6 +183,9 @@ h1 {
     .following {
     width:300px;
 }
+
+
+
 
 .repo-list {
     width: 90%;
