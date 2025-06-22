@@ -165,11 +165,9 @@ h1 {
 
 @media(max-width:768px) {
 
-    body {
-        width: 100%;
-    }
     .container {
-        height: 100vh;
+        width: 100%;
+        height: auto;
     }
     .profile {
         align-items: center;
@@ -183,9 +181,6 @@ h1 {
     .following {
     width:300px;
 }
-
-
-
 
 .repo-list {
     width: 90%;
