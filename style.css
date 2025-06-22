@@ -162,27 +162,78 @@ h1 {
 
 
 
-
-@media(max-width:768px) {
-
+@media (max-width: 768px) {
     .container {
-        width: 100%;
-        height: auto;
+        width: 95%;
+        padding: 20px;
     }
+
+    #usernameInput {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .btn {
+        width: 80%;
+        font-size: 1rem;
+    }
+
     .profile {
+        width: 100%;
+        padding: 20px;
         align-items: center;
     }
 
-    .profile-name,
-    .location,
-    .company,
-    .detail,
-    .follow,
-    .following {
-    width:300px;
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .detail {
+        width: 90%;
+        text-align: center;
+    }
+
+    .repo-list {
+        width: 100%;
+    }
+
+    .repo-card {
+        padding: 10px;
+    }
+
+    .repo-card a {
+        font-size: 16px;
+    }
 }
 
-.repo-list {
-    width: 90%;
-}
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    #usernameInput {
+        font-size: 0.95rem;
+        padding: 8px;
+    }
+
+    .btn {
+        font-size: 0.95rem;
+        padding: 8px;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .repo-card a {
+        font-size: 15px;
+    }
+
+    .repo-meta,
+    .repo-stats {
+        font-size: 12px;
+    }
 }
