@@ -165,8 +165,10 @@ h1 {
 
 @media(max-width:768px) {
 
-    .container {
+    body {
         width: 100%;
+    }
+    .container {
         height: auto;
     }
     .profile {
