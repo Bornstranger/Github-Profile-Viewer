@@ -127,7 +127,7 @@ h1 {
   list-style: none;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 1rem;
 }
 
@@ -190,7 +190,6 @@ h1 {
 @media (max-width: 900px) {
     .container {
         width: 100%;
-        min-height: 100%;
         padding: 20px;
     }
 
@@ -246,12 +245,21 @@ h1 {
     }
 
     #usernameInput {
-        font-size: 0.95rem;
+        font-size: 1rem;
         padding: 8px 100px;
     }
 
+    .data {
+        flex-direction: column;
+    }
+
+    .repos {
+        display: flex;
+        flex-direction: column;
+    }
+
     .btn {
-        font-size: 0.95rem;
+        font-size: 1rem;
         padding: 8px;
     }
 
