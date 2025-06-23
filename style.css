@@ -1,19 +1,15 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: flex;
     justify-content: center;
 }
 
-
-
 .container {
-    width: 90%;
+    width: 100%;
     height: auto;
     min-height: 100vh;
     display: flex;
@@ -24,7 +20,6 @@ body {
     margin: 0 auto;
     background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(27,31,35,0.1);
 
 }
 
@@ -43,7 +38,7 @@ h1 {
     width: 400px;
     border: 2px solid #2c80b4;
     padding: 10px;
-    margin: 20px;
+    margin: 10px;
     border-radius: 10px;
     font-size: 1.2rem;
     font-weight: 600;
@@ -70,27 +65,47 @@ h1 {
 }
 
 .btn:hover {
-    transform: scale(1.1);
+    transform: scale(0.9);
+    background-color: #0366d6;
+}
+
+.data {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
 }
 
 .profile {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 70%;
+    width: 30%;
     padding: 30px;
-    gap: 20px;
+    gap: 10px;
 }
 
 .profile-img {
     background-size: cover;
-    width: 150px;
-    height: 150px;
+    background-position: center;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .detail {
     max-width: 500px;
+}
+
+.bio {
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 /* Repositories */
@@ -111,6 +126,16 @@ h1 {
 .repos {
   list-style: none;
   padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 1rem;
+}
+
+.repos h2 {
+     grid-column: span 2;
+     text-align: center;
+     color: #2c80b4;
+     font-size: 2rem;
 }
 
 .repo-card {
@@ -162,19 +187,21 @@ h1 {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .container {
-        width: 95%;
+        width: 100%;
+        min-height: 100%;
         padding: 20px;
     }
 
+    .data {
+        flex-direction: column;
+    }
     #usernameInput {
-        width: 90%;
         font-size: 1rem;
     }
 
     .btn {
-        width: 80%;
         font-size: 1rem;
     }
 
@@ -188,10 +215,15 @@ h1 {
         width: 120px;
         height: 120px;
     }
-
+    
     .detail {
         width: 90%;
         text-align: center;
+    }
+
+    .repos {
+        display: flex;
+        flex-direction: column;
     }
 
     .repo-list {
@@ -215,7 +247,7 @@ h1 {
 
     #usernameInput {
         font-size: 0.95rem;
-        padding: 8px;
+        padding: 8px 100px;
     }
 
     .btn {
